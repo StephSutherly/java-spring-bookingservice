@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface CourseRepository extends JpaRepository<Course, Long> {
     List<Course> findCourseByStarRating(int starRating);
+
+//    List<Course> findCoursesByDate(String date);
 }

@@ -1,6 +1,7 @@
 package com.codeclan.BookingService.BookingService;
 
 import com.codeclan.BookingService.BookingService.models.Course;
+import com.codeclan.BookingService.BookingService.models.Customer;
 import com.codeclan.BookingService.BookingService.respositories.BookingRepository.BookingRepository;
 import com.codeclan.BookingService.BookingService.respositories.CourseRepository.CourseRepository;
 import com.codeclan.BookingService.BookingService.respositories.CustomerRepository.CustomerRepository;
@@ -36,5 +37,17 @@ public class BookingServiceApplicationTests {
 		List<Course> found = courseRepository.findCourseByStarRating(4);
 		assertEquals(new Long(3), found.get(0).getId());
 	}
+
+//	@Test
+//	public void canFindCustomersByCourse() {
+//		List<Customer> found = customerRepository.findCustomersByCourseId(1L);
+//		assertEquals(2, found.size());
+//	}
+
+//	@Test
+//	public void canFindCoursesByDate() {
+//		List<Course> found = courseRepository.findCoursesByDate("01/10/19");
+//		assertEquals(new Long(3), found.get(0).getId());
+//	}
 
 }
