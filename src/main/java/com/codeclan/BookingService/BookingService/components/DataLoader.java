@@ -1,5 +1,6 @@
 package com.codeclan.BookingService.BookingService.components;
 
+import com.codeclan.BookingService.BookingService.models.Booking;
 import com.codeclan.BookingService.BookingService.models.Course;
 import com.codeclan.BookingService.BookingService.models.Customer;
 import com.codeclan.BookingService.BookingService.respositories.BookingRepository.BookingRepository;
@@ -46,6 +47,17 @@ public class DataLoader implements ApplicationRunner {
         customerRepository.save(customer3);
 
 
+        Booking booking1 = new Booking("01/08/19", course1, customer2);
+        bookingRepository.save(booking1);
+
+        Booking booking2 = new Booking("01/10/19", course3, customer1);
+        bookingRepository.save(booking2);
+
+        Booking booking3 = new Booking("12/08/19", course2, customer2);
+        bookingRepository.save(booking3);
+
+        Booking booking4 = new Booking("01/09/19", course1, customer3);
+        bookingRepository.save(booking4);
     }
 
 }
