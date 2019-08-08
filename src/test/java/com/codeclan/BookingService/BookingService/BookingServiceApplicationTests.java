@@ -32,17 +32,17 @@ public class BookingServiceApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Test
-	public void canFindCoursesByRating() {
-		List<Course> found = courseRepository.findCourseByStarRating(4);
-		assertEquals(new Long(3), found.get(0).getId());
-	}
-
 //	@Test
-//	public void canFindCustomersByCourse() {
-//		List<Customer> found = customerRepository.findCustomersByCourseId(1L);
-//		assertEquals(2, found.size());
+//	public void canFindCoursesByRating() {
+//		List<Course> found = courseRepository.findCourseByStarRating(4);
+//		assertEquals(new Long(3), found.get(0).getId());
 //	}
+
+	@Test
+	public void canFindCustomersByCourse() {
+		List<Customer> found = customerRepository.getCustomersByCourseId(3L);
+		assertEquals(1, found.size());
+	}
 
 //	@Test
 //	public void canFindCoursesByDate() {

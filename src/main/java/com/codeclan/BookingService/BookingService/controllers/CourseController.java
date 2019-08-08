@@ -22,8 +22,5 @@ public class CourseController {
         return courseRepository.findCourseByStarRating(rating);
     }
 
-//    @GetMapping(value = "/date/{date}")
-//    public List<Course> getCoursesByDate(@PathVariable String date) {
-//        return courseRepository.findCoursesByDate(date);
-//    }
+
 }

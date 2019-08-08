@@ -17,9 +17,9 @@ public class CustomerController {
     @Autowired
     CustomerRepository customerRepository;
 
-//    Below broken, need to go through Booking
-//    @GetMapping(value = "/course/{courseId}")
-//    public List<Customer> getCustomersByCourseId(@PathVariable Long courseId) {
-//        return customerRepository.findCustomersByCourseId(courseId);
-//    }
+    @GetMapping(value = "/course/{id}")
+    public List<Customer> getCustomersByCourseId(@PathVariable Long id){
+        return customerRepository.getCustomersByCourseId(id);
+    }
+
 }
